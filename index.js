@@ -2,12 +2,11 @@
 
 const util = require('util');
 const EventEmitter = require('events');
+util.inherits(TestEmitter, EventEmitter);
 
 function TestEmitter() {
   EventEmitter.call(this);
 }
-
-util.inherits(TestEmitter, EventEmitter);
 
 const test = new TestEmitter();
 
