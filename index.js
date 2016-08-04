@@ -11,8 +11,8 @@ util.inherits(TestEmitter, EventEmitter);
 
 const test = new TestEmitter();
 
-test.on('push', function() {
-  console.log('push');
+test.on('push', function(msg) {
+  console.log('push', msg);
 });
 
-test.emit('push');
+test.emit('push', 'my message');
